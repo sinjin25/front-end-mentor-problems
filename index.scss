@@ -1,0 +1,48 @@
+body {
+    line-height: 2;
+    padding: 0 1em;
+    font-size: 15px;
+    font-family: "Outfit", sans-serif;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    img {
+        min-width: 0;
+    }
+    > img {
+        position: relative;
+        &::after {
+            /* content: attr(screenshot); */
+            content: 'aaa';
+            min-width: 10ch;
+            z-index: 2;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.link {
+    color: orange;
+    text-decoration: underline orange 2px;
+    font-size: 1.5rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sect {
+    margin-bottom: 1rem;
+    padding: 2em;
+    border: 2px solid grey;
+    border-radius: 0.25em;
+    &-title {
+        margin-bottom: 1rem;
+    }
+}
