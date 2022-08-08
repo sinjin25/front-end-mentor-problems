@@ -1,0 +1,183 @@
+html {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  background: var(--very-dark-blue);
+}
+
+.guide {
+  text-align: center;
+}
+
+.center-it {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  margin: 0 auto;
+  width: 325px;
+  height: 352px;
+  padding: 1.5em;
+  background-color: var(--dark-blue);
+  background: linear-gradient(to bottom, hsl(220deg, 19%, 15%) 0%, hsl(215deg, 27%, 12%) 100%);
+  line-height: 1.5;
+  border-radius: 1em;
+}
+.card-page {
+  display: none;
+}
+.card-page[visible] {
+  display: block;
+}
+.card-page-2[visible] {
+  display: flex;
+  flex-direction: column;
+}
+.card-page-2 {
+  text-align: center;
+}
+.card-page-2 .card-title {
+  font-size: 1.4rem;
+  line-height: 2;
+}
+.card-page-2 .card-body {
+  font-size: 0.78rem;
+}
+.card-thank-you {
+  width: 8.5em;
+  margin: 0 auto;
+}
+.card-symbol {
+  display: inline-block;
+  /* wrong color, just for visibility */
+  /* background: var(--dark-blue); */
+  background-color: rgb(38, 47, 56);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  font-size: 0.9rem;
+}
+.card-symbol svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-title {
+  color: var(--white);
+  line-height: 2.5;
+  font-size: 1.5rem;
+}
+.card-body {
+  color: var(--light-grey);
+  font-size: 0.85rem;
+}
+.card-buttons {
+  color: var(--light-grey);
+  display: flex;
+  margin: 1.5rem 0;
+  width: 100%;
+  justify-content: space-between;
+}
+.card-rating {
+  height: 2.75rem;
+  width: 2.75rem;
+  background: rgb(35, 44, 53);
+  border-radius: 50%;
+  position: relative;
+}
+.card-rating::after {
+  content: attr(data-value);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+}
+.card-rating[activated] {
+  background: var(--light-grey);
+  color: var(--white);
+}
+.card-rating:hover, .card-rating:active {
+  background: var(--orange);
+  color: var(--white);
+}
+.card-result {
+  color: hsla(25deg, 97%, 53%, 0.6);
+  background: rgb(38, 47, 56);
+  border-radius: 2em;
+  line-height: 2;
+  display: inline-block;
+  margin: 2rem auto;
+  padding: 0 1em;
+  font-size: 0.75rem;
+}
+.card-submit {
+  color: var(--white);
+  background: var(--orange);
+  line-height: 3;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 2em;
+  letter-spacing: 0.08em;
+}
+.card-submit:hover, .card-submit:active {
+  background: var(--white);
+  color: var(--orange);
+}
+.card-submit[disabled] {
+  background: var(--light-grey);
+  color: var(--white);
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 415px;
+    height: 415px;
+    border-radius: 2em;
+  }
+  .card-symbol, .card-rating {
+    width: 3rem;
+    height: 3rem;
+  }
+  .card-title {
+    font-size: 1.8rem;
+    line-height: 2;
+    padding-top: 0.5em;
+  }
+  .card-body {
+    font-size: 0.95rem;
+  }
+  .card-buttons {
+    margin: 2rem 0;
+  }
+  .card-page-2 .card-thank-you {
+    width: 11em;
+    padding: 1em 0;
+  }
+  .card-page-2 .card-result {
+    font-size: 1rem;
+    margin: 1.2rem auto;
+  }
+  .card-page-2 .card-title {
+    font-size: 2rem;
+    padding: 0;
+  }
+  .card-page-2 .card-body {
+    font-size: 1rem;
+    padding: 0 0.25em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
