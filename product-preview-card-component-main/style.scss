@@ -25,6 +25,15 @@ body {
     /* margin-left: 15px; */
     /* center for final draft */
     margin: 0 auto;
+    @media only screen and (min-width: 768px) {
+        max-width: unset;
+    }
+}
+.center-it {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .card {
     margin: 0 auto;
@@ -32,6 +41,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    width: calc(375px - 30px);
     &-body {
         background-color: var(--white);
         padding: 1.25em 1.25em;
@@ -39,6 +49,8 @@ body {
         font-size: 1rem;
     }
     &-head {
+        /* fix gap */
+        display: flex;
     }
     &-title {
         color: var(--very-dark-blue);
@@ -79,6 +91,18 @@ body {
         border-radius: .5em;
         span {
             margin-left: .35em;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        flex-direction: row;
+        width: 600px;
+        &-head {
+            flex: 0 0 50%;
+            position: relative;
+            overflow: hidden;
+        }
+        &-img {
+
         }
     }
 }

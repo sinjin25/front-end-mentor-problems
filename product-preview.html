@@ -21,13 +21,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="guide">
-        <img src="./product-preview-card-component-main/design/desktop-design.jpg" alt="">
-    </div>
     <div class="container">
-        <div class="card">
+        <div class="card center-it">
             <!-- use img set -->
-            <img class="card-head" src="./product-preview-card-component-main/images/image-product-mobile.jpg" />
+            <picture class="card-head">
+                <source 
+                srcset="/product-preview-card-component-main/images/image-product-desktop.jpg"
+                media="(min-width: 768px)"
+                />
+                <img
+                class="card-img"
+                    src="/product-preview-card-component-main/images/image-product-mobile.jpg"
+                    alt="Perfume laid in a table with some leafs"
+                />  
+            </picture>
             <div class="card-body">
                 <div class="card-cat">perfume</div>
                 <div class="card-title title">Gabrielle Essence Eau De Parfum</div>

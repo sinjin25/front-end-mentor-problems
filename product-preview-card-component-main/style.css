@@ -26,6 +26,18 @@ body {
   /* center for final draft */
   margin: 0 auto;
 }
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: unset;
+  }
+}
+
+.center-it {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .card {
   margin: 0 auto;
@@ -33,12 +45,17 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  width: 345px;
 }
 .card-body {
   background-color: var(--white);
   padding: 1.25em 1.25em;
   line-height: 1.7;
   font-size: 1rem;
+}
+.card-head {
+  /* fix gap */
+  display: flex;
 }
 .card-title {
   color: var(--very-dark-blue);
@@ -80,6 +97,17 @@ body {
 }
 .card-cta span {
   margin-left: 0.35em;
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    width: 600px;
+  }
+  .card-head {
+    flex: 0 0 50%;
+    position: relative;
+    overflow: hidden;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
