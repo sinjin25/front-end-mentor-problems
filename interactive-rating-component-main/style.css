@@ -79,6 +79,7 @@ body {
   color: var(--white);
   line-height: 2.5;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 .card-body {
   color: var(--light-grey);
