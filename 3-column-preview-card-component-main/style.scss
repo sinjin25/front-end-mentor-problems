@@ -35,7 +35,6 @@ body {
     width: calc(375px - 50px);
 }
 .card {
-    background-color: var(--dark-cyan);
     color: white;
     font-size: 1rem;
     display: flex;
@@ -43,6 +42,16 @@ body {
     height: 435px;
     padding: 2.75rem 2.75em;
     line-height: 1;
+    background-color: var(--primary);
+    &.--dark-cyan {
+        --primary: var(--dark-cyan);
+    }
+    &.--orange {
+        --primary: var(--orange);
+    }
+    &.--dark {
+        --primary: var(--v-dark-cyan);
+    }
     &-head {
         flex: 1 0 auto;
     }
@@ -53,6 +62,7 @@ body {
     }
     &-title {
         font-size: 2.5rem;
+        text-transform: uppercase;
     }
     &-text {
         line-height: 1.7;
@@ -65,6 +75,7 @@ body {
     }
     &-cta {
         color: var(--dark-cyan);
+        color: var(--primary);
         background: white;
         border-radius: 2em;
         padding: 1em 2em;
