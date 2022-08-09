@@ -19,21 +19,33 @@ body {
 .center-it {
   position: fixed;
   top: 50%;
-  left: 100%;
-  transform: translate(-100%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: inline-block;
 }
 
 .center-it-2 {
   position: fixed;
-  top: 50%;
+  top: -19%;
   left: 0;
-  transform: translate(0, -50%);
+  transform: translate(0, 0%);
   display: inline-block;
 }
 
 .card-container {
   width: 325px;
+}
+@media only screen and (min-width: 768px) {
+  .card-container {
+    flex-direction: row;
+    display: flex;
+    width: 920px;
+    border-radius: 0.5em;
+    overflow: hidden;
+  }
+  .card-container .card {
+    flex: 1 1 33.33%;
+  }
 }
 
 .card {
@@ -82,6 +94,14 @@ body {
   background: white;
   border-radius: 2em;
   padding: 1em 2em;
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    height: 500px;
+  }
+  .card-head {
+    flex: 0.5 0 auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
