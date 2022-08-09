@@ -1,0 +1,40 @@
+html {
+    --orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --v-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+}
+
+.center-it {
+    position: fixed;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+    display: inline-block;
+}
+.center-it-2 {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    display: inline-block;
+}
+
+.card-container {
+    width: calc(375px - 50px);
+}
+.card {
+    background-color: var(--dark-cyan);
+    color: white;
+}
