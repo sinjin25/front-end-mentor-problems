@@ -4,6 +4,7 @@ body {
     font-size: 15px;
     font-family: "Outfit", sans-serif;
     padding-top: 2rem;
+    background-color: hsl(30, 38%, 92%);
 }
 
 .flex {
@@ -45,5 +46,45 @@ body {
     border-radius: 0.25em;
     &-title {
         margin-bottom: 1rem;
+    }
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &[hidden] {
+        display: none;
+    }
+    &-focus {
+        max-width: 80%;
+    }
+}
+
+.link-hover {
+    position: relative;
+    &:hover {
+        &::after {
+            display: flex;
+        }
+    }
+    &::after {
+        content: "View in browser";
+        color: orange;
+        text-decoration: underline orange;
+        font-size: 3rem;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255,255,255, .65);
+        z-index: 2;
+        position: absolute;
+        inset: 0;
     }
 }

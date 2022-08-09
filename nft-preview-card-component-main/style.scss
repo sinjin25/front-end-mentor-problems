@@ -87,6 +87,7 @@ body {
         font-size: 1.4rem;
         line-height: 2.5;
         margin-top: 0.5rem;
+        font-weight: 600;
         &:hover {
             color: var(--cyan);
         }
@@ -111,6 +112,7 @@ body {
     }
     &-bid {
         color: var(--cyan);
+        font-weight: 300;
         &::after {
             content: attr(data-cur);
             padding-left: 0.2em;

@@ -89,6 +89,7 @@ body {
   font-size: 1.4rem;
   line-height: 2.5;
   margin-top: 0.5rem;
+  font-weight: 600;
 }
 .card-title:hover {
   color: var(--cyan);
@@ -113,6 +114,7 @@ body {
 }
 .card-bid {
   color: var(--cyan);
+  font-weight: 300;
 }
 .card-bid::after {
   content: attr(data-cur);

@@ -7,12 +7,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
+    <script defer src="./lightbox.js"></script>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="lightbox" id="lightbox" hidden>
+        <div class="lightbox-focus">
+            <img id="lightbox-img" src="screenshots/nft-desktop-2.png" alt="">
+        </div>
+    </div>
     <section class="sect">
         <h1 class="title">Project List</h1>
         <p>Site for front-end-mentor challenges. Usually given a design doc and some assets.</p>
@@ -22,14 +28,14 @@
             <a href="qr-code.html" class="link">QR Code Recreation</a>
             <p>Creating a QR code widget given a mobile and desktop design</p>
         </section>
-        <a class="flex"  href="qr-code.html">
+        <a class="flex link-hover"  href="qr-code.html">
             <div>
                 <p>desktop</p>
                 <img src="screenshots/qr-desktop.png" alt="" screenshot="desktop">
             </div>
             <div>
                 <p>mobile</p>
-                <img src="screenshots/qr-mobile.png" alt="" screenshot="desktop">
+                <img src="screenshots/qr-mobile.png" alt="" screenshot="mobile">
             </div>
         </a>
     </section>
@@ -38,14 +44,14 @@
             <a href="product-preview.html" class="link">Product Preview</a>
             <p>Creating a complex product card for mobile and desktop design</p>
         </section>
-        <a class="flex"  href="product-preview.html">
+        <a class="flex link-hover"  href="product-preview.html">
             <div>
                 <p>desktop</p>
                 <img src="screenshots/perfume-desktop.png" alt="" screenshot="desktop">
             </div>
             <div>
                 <p>mobile</p>
-                <img src="screenshots/perfume-mobile.png" alt="" screenshot="desktop">
+                <img src="screenshots/perfume-mobile.png" alt="" screenshot="mobile">
             </div>
         </a>
     </section>
@@ -54,7 +60,7 @@
             <a href="rating-component.html" class="link">Rating Component</a>
             <p>Creating a multi-page rating form with vanilla JavaScript.</p>
         </section>
-        <a class="flex"  href="rating-component.html">
+        <a class="flex link-hover"  href="rating-component.html">
             <div>
                 <p>desktop</p>
                 <img src="screenshots/rating-desktop.png" alt="" screenshot="desktop">
@@ -62,8 +68,42 @@
             </div>
             <div>
                 <p>mobile</p>
-                <img src="screenshots/rating-mobile.png" alt="" screenshot="desktop">
-                <img src="screenshots/rating-mobile-2.png" alt="" screenshot="desktop">
+                <img src="screenshots/rating-mobile.png" alt="" screenshot="mobile">
+                <img src="screenshots/rating-mobile-2.png" alt="" screenshot="mobile">
+            </div>
+        </a>
+    </section>
+    <section id="nft" class="sect">
+        <section class="sect-title">
+            <a href="nft-preview-card.html" class="link">NFT Preview Card</a>
+            <p>Creating a product card with active hover states and image overlays</p>
+        </section>
+        <a class="flex link-hover"  href="nft-preview-card.html">
+            <div>
+                <p>desktop</p>
+                <img src="screenshots/nft-desktop-2.png" alt="" screenshot="desktop">
+                <img src="screenshots/nft-desktop.png" alt="" screenshot="desktop">
+            </div>
+            <div>
+                <p>mobile</p>
+                <img src="screenshots/nft-mobile.png" alt="" screenshot="mobile">
+                <img src="screenshots/nft-mobile-2.png" alt="" screenshot="mobile">
+            </div>
+        </a>
+    </section>
+    <section id="stat-preview" class="sect">
+        <section class="sect-title">
+            <a href="stats-preview.html" class="link">Eye-catcher with Stats</a>
+            <p>Creating a product card with active hover states and image overlays</p>
+        </section>
+        <a class="flex link-hover"  href="stats-preview.html">
+            <div>
+                <p>desktop</p>
+                <img src="screenshots/stats-preview-desktop.png" alt="" screenshot="desktop">
+            </div>
+            <div>
+                <p>mobile</p>
+                <img src="screenshots/stats-preview-mobile.png" alt="" screenshot="mobile">
             </div>
         </a>
     </section>
