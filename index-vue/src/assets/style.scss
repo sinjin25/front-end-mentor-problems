@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Raleway:wght@400;700&display=swap');
+
+:root {
+    font-size: 15px;
+    --accent-1: hsl(214, 89%, 52%);
+    --accent-1-t: hsla(214, 89%, 52%, 0);
+    --accent-2: hsl(130, 89%, 52%);
+    --accent-2-t: hsla(130, 89%, 52%, 0);
+    --dark: hsl(212, 24%, 11%);
+    --dark-t: hsla(212, 24%, 11%, 0);
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+}
+
+.no-selection {
+    user-select: none; /* standard syntax */
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
