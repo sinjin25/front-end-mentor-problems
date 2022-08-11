@@ -1,5 +1,5 @@
 const path = require("path");
 
 module.exports = {
-  outputDir: path.resolve(__dirname, "../vue-test"),
+  outputDir: path.resolve(__dirname, "../public"),
 }
