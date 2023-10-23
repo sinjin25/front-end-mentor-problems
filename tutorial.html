@@ -6,10 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="./newsletter-sign-up-main/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="app">
+        <div class="modal-start">
+            <div class="modal-banner">
+                <img src="./newsletter-sign-up-main/assets/images/illustration-sign-up-mobile.svg" alt="">
+            </div>
+            <div class="modal-body">
+                <div class="c-dark-navy">
+                    <p class="title bold mb-24 text-shadow">Stay updated!</p>
+                    <p class="body bold mb-24">Join 60,000+ product managers receiving monthly updates on:</p>
+                    <ul class="list mb-40">
+                        <li class="list-item mb-10">Product discovery and building what matters</li>
+                        <li class="list-item mb-10">Measuring to ensure updates are a success</li>
+                        <li class="list-item mb-10">And much more!</li>
+                    </ul>
+                </div>
+                <div class="c-dark-navy">
+                    <div class="input-group mb-24">
+                        <div class="input-group-top mb-8">
+                            <p class="input-label body-small bold">Email address</p>
+                            <p class="input-error body-small c-vermillion bold">Valid email required</p>
+                        </div>
+                        <input type="text" class="input" placeholder="email@company.com">
+                    </div>
+                    <button class="submit c-white">Subscribe to monthly newsletter</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

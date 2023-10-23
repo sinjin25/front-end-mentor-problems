@@ -29,20 +29,39 @@ todo: active states on mobile and not
     font-weight: bold;
 }
 
+.mb {
+    &-40 {
+        margin-bottom: var(--px-40);
+    }
+
+    &-24 {
+        margin-bottom: var(--px-24);
+    }
+
+    &-10 {
+        margin-bottom: var(--px-10);
+    }
+
+    &-8 {
+        margin-bottom: var(--px-8);
+    }
+}
+
 /* utility */
 
 /* color */
 
 :root {
     --vermillion: #FF6155;
-    --grey-25: #19182B;
+    --grey-25: rgba(25, 24, 43, .25);
     --dark-navy: #36384D;
     --pale-navy: #36384D;
     --white: #FFF;
 
-    --pad-40: 40px;
-    --pad-24: 24px;
-    --pad-10: 10px;
+    --px-40: 40px;
+    --px-24: 24px;
+    --px-10: 10px;
+    --px-8: 8px;
 
     --mobile-height: 842px;
     --mobile-width: 375px;
@@ -51,25 +70,82 @@ todo: active states on mobile and not
 
 /* color */
 .c {
-    &.vermillion {
-        color: var(--vermillion)
+    &-vermillion {
+        color: var(--vermillion);
     }
 
-    &.grey-25 {
-        color: var(--grey-25)
+    &-grey-25 {
+        color: var(--grey-25);
     }
 
-    &.dark-navy {
-        color: var(--dark-navy)
+    &-dark-navy {
+        color: var(--dark-navy);
     }
 
-    &.pale-navy {
-        color: var(--pale-navy)
+    &-pale-navy {
+        color: var(--pale-navy);
     }
 
-    &.white {
-        color: var(--white)
+    &-white {
+        color: var(--white);
     }
 }
 
 .bg {}
+
+/* main styling */
+.modal-start {
+    height: var(--mobile-height);
+    width: var(--mobile-width);
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+
+    background: var(--white);
+}
+
+.modal {
+    &-banner {
+        height: var(--mobile-banner-height);
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &-body {
+        padding: var(--px-40) var(--px-24);
+    }
+}
+
+.submit {
+    background: var(--dark-navy);
+    padding: 18px 48px 14px;
+    border-radius: var(--px-8);
+}
+
+.input {
+    padding: 16px var(--px-24);
+    border: 1px solid var(--grey-25);
+    border-radius: var(--px-8);
+    width: 100%;
+
+    &-group-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-label {}
+
+    &-error {}
+
+    &-group {}
+}
+
+.text-shadow {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
