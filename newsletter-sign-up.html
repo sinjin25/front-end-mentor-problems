@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="./product-preview-card-component-main/images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="./newsletter-sign-up-main/styles.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app" class="">
+        <!-- start state -->
+        <div class="modal-container" id="default">
+            <div class="modal-banner">
+                <img src="newsletter-sign-up-main/assets/images/illustration-sign-up-mobile.svg" alt="">
+            </div>
+            <div class="modal-body">
+                <p class="title bold c-dark-navy drop-shadow --spacing">Stay updated!</p>
+                <p class="body bold c-dark-navy --spacing">Join 60,000+ product managers receiving monthly updates on:
+                </p>
+                <ul class="body c-dark-navy --spacing-big">
+                    <li class="list-item">
+                        <div class="list-icon c-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                                <g fill="none">
+                                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                                    <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                                </g>
+                            </svg>
+                        </div>
+                        <p>Product discovery and building what matters</p>
+                    </li>
+                    <li class="list-item">
+                        <div class="list-icon c-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                                <g fill="none">
+                                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                                    <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                                </g>
+                            </svg>
+                        </div>
+                        <p>Measuring to ensure updates are a success</p>
+                    </li>
+                    <li class="list-item">
+                        <div class="list-icon c-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                                <g fill="none">
+                                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                                    <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                                </g>
+                            </svg>
+                        </div>
+                        <p>And much more!</p>
+                    </li>
+                </ul>
+                <div class="input-group c-dark-navy --spacing">
+                    <div class="input-label-group">
+                        <label class="label body-small bold --block" for="">Email address</label>
+                        <p class="input-error c-vermillion bold body-small">Valid email required</p>
+                    </div>
+                    <input id="email_field" class="input --block --rounded --w-100" type="text"
+                        placeholder="email@company.com">
+                </div>
+                <button id="submit" class="submit bold c-white bg-dark-navy --rounded --w-100">Subscribe to
+                    monthly
+                    newsletter</button>
+            </div>
+        </div>
+        <div class="success-container --hide" id="success">
+            <div class="--spacing-big">
+                <svg class="submit-icon --spacing-big" xmlns="http://www.w3.org/2000/svg" width="64" height="64"
+                    viewBox="0 0 21 21">
+                    <g fill="none">
+                        <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                    </g>
+                </svg>
+                <p class="title c-dark-navy bold --spacing">Thanks for subscribing!</p>
+                <p class="c-dark-navy">A confirmation email has been sent to <strong
+                        class="bold">ash@loremcompany.com</strong>.
+                    Please
+                    open it
+                    and click the button inside to confirm your subscription</p>
+            </div>
+            <button id="dismiss" class="submit submit-nudge bold c-white bg-dark-navy --rounded --w-100">Dismiss
+                message</button>
+        </div>
+    </div>
+
+    <script>
+        function setup() {
+            const submitBtn = document.getElementById('submit')
+            const dismissBtn = document.getElementById('dismiss')
+            const successModal = document.getElementById('success')
+            const modal = document.getElementById('default')
+            const emailField = document.getElementById('email_field')
+            const group = document.getElementsByClassName('input-group')
+
+            const HIDE_CLASS_NAME = '--hide'
+
+            submitBtn.addEventListener('click', () => {
+                if (!emailField) {
+                    return
+                }
+                if (emailField.value.match('@') === null) {
+                    if (group) group[0].classList.add('has-error')
+                    return
+                } else {
+                    if (group) group[0].classList.remove('has-error')
+                }
+                if (modal) {
+                    modal.classList.add(HIDE_CLASS_NAME)
+                    successModal.classList.remove(HIDE_CLASS_NAME)
+                }
+            })
+
+            dismissBtn.addEventListener('click', () => {
+                if (modal) {
+                    modal.classList.remove(HIDE_CLASS_NAME)
+                    successModal.classList.add(HIDE_CLASS_NAME)
+                }
+            })
+        }
+        document.addEventListener('DOMContentLoaded', setup)
+    </script>
+</body>
+
+</html>
