@@ -21,5 +21,20 @@ todo: active states on mobile and not
 }
 
 /* color */
+.c.vermillion {
+  color: var(--vermillion);
+}
+.c.grey-25 {
+  color: var(--grey-25);
+}
+.c.dark-navy {
+  color: var(--dark-navy);
+}
+.c.pale-navy {
+  color: var(--pale-navy);
+}
+.c.white {
+  color: var(--white);
+}
 
 /*# sourceMappingURL=styles.css.map */

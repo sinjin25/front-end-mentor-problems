@@ -26,6 +26,26 @@ todo: active states on mobile and not
 }
 
 /* color */
-.c {}
+.c {
+    &.vermillion {
+        color: var(--vermillion)
+    }
+
+    &.grey-25 {
+        color: var(--grey-25)
+    }
+
+    &.dark-navy {
+        color: var(--dark-navy)
+    }
+
+    &.pale-navy {
+        color: var(--pale-navy)
+    }
+
+    &.white {
+        color: var(--white)
+    }
+}
 
 .bg {}
