@@ -3,6 +3,8 @@
 ## A. Groundwork
 
 1. Get a css reset
+   1A. Search for "CSS reset"
+   2B. https://elad2412.github.io/the-new-css-reset/
 
 2. Open the Frontend Mentor figma (not required, just easier to find padding, etc.)
    2A. If you don't want, you can take the screenshots of the finished product (ex: mobile) and do a position fixed on it. Do a position fixed on your own work so that they're lined up next to each other (ex: Yours | Theirs) and then match the padding that way
