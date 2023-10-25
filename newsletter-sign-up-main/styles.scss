@@ -48,6 +48,9 @@ todo: active states on mobile and not
 }
 
 /* utility */
+.--hide {
+    display: none;
+}
 
 /* color */
 
@@ -94,7 +97,8 @@ todo: active states on mobile and not
 .bg {}
 
 /* main styling */
-.modal-start {
+.modal-start,
+.modal-success {
     height: var(--mobile-height);
     width: var(--mobile-width);
 
@@ -122,10 +126,33 @@ todo: active states on mobile and not
     }
 }
 
+.modal-success {
+    display: flex;
+    flex-direction: column;
+    padding: 149px 24px 40px 24px;
+
+    &-icon {
+        margin-bottom: 40px;
+    }
+
+    &-title {
+        margin-bottom: 25px;
+    }
+
+    &-submit {
+        margin-top: auto;
+    }
+}
+
+
 .submit {
-    background: var(--dark-navy);
+    width: 100%;
     padding: 18px 48px 14px;
+
+    background: var(--dark-navy);
     border-radius: var(--px-8);
+
+    text-align: center;
 }
 
 .input {
