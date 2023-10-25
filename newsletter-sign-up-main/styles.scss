@@ -241,6 +241,8 @@ todo: active states on mobile and not
 
 .list {
     &-item {
+        display: flex;
+
         svg {
             margin-right: 16px;
         }
