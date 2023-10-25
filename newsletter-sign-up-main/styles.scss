@@ -15,6 +15,10 @@ todo: active states on mobile and not
 .title {
     font-size: 40px;
     line-height: 1;
+
+    @media only screen and (min-width: 928px) {
+        font-size: 56px;
+    }
 }
 
 .body {
@@ -61,6 +65,7 @@ todo: active states on mobile and not
     --pale-navy: #36384D;
     --white: #FFF;
 
+    --px-64: 64px;
     --px-40: 40px;
     --px-24: 24px;
     --px-10: 10px;
@@ -69,6 +74,11 @@ todo: active states on mobile and not
     --mobile-height: 842px;
     --mobile-width: 375px;
     --mobile-banner-height: 284px;
+
+    --desktop-height: 641px;
+    --desktop-width: 928px;
+    --desktop-banner-width: 400px;
+    --desktop-banner-height: 593px;
 }
 
 /* color */
@@ -124,6 +134,39 @@ todo: active states on mobile and not
     &-body {
         padding: var(--px-40) var(--px-24);
     }
+
+    &-body-text {
+        font-weight: bold;
+    }
+
+    @media only screen and (min-width: 928px) {
+        &-start {
+            width: var(--desktop-width);
+            height: var(--desktop-height);
+            display: flex;
+            border-radius: 36px;
+        }
+
+        &-banner {
+            order: 2;
+            height: 100%;
+            padding: 24px 24px 24px 0;
+
+            img {
+                width: var(--desktop-banner-width);
+                height: var(--desktop-banner-height);
+                border-radius: 16px;
+            }
+        }
+
+        &-body {
+            padding: 103px 64px 98px 64px;
+        }
+
+        &-body-text {
+            font-weight: 400;
+        }
+    }
 }
 
 .modal-success {
@@ -168,6 +211,8 @@ todo: active states on mobile and not
     border-radius: var(--px-8);
     width: 100%;
 
+    cursor: pointer;
+
     &-group-top {
         display: flex;
         justify-content: space-between;
@@ -204,4 +249,8 @@ todo: active states on mobile and not
 
 .text-shadow {
     text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+
+    @media only screen and (min-width: 928px) {
+        text-shadow: none;
+    }
 }
