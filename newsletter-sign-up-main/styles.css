@@ -113,6 +113,10 @@ todo: active states on mobile and not
   display: flex;
   justify-content: space-between;
 }
+.list-item svg {
+  margin-right: 16px;
+}
+
 .text-shadow {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
