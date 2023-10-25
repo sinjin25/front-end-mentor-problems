@@ -4,7 +4,7 @@ body {
   font-size: 15px;
   font-family: "Outfit", sans-serif;
   padding-top: 2rem;
-  background-color: hsl(30deg, 38%, 92%);
+  background-color: hsl(30, 38%, 92%);
 }
 
 .flex {

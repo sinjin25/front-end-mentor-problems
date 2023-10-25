@@ -48,7 +48,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: hsl(277deg, 65%, 64%);
+  background-color: hsl(277, 65%, 64%);
   background-image: url(./images/image-header-mobile.jpg);
   background-size: cover;
   z-index: 2;
@@ -58,7 +58,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: hsl(277deg, 65%, 64%);
+  background-color: hsl(277, 65%, 64%);
   z-index: 3;
   opacity: 0.2;
 }

@@ -30,7 +30,7 @@ body {
   height: 352px;
   padding: 1.5em;
   background-color: var(--dark-blue);
-  background: linear-gradient(to bottom, hsl(220deg, 19%, 15%) 0%, hsl(215deg, 27%, 12%) 100%);
+  background: linear-gradient(to bottom, hsl(220, 19%, 15%) 0%, hsl(215, 27%, 12%) 100%);
   line-height: 1.5;
   border-radius: 1em;
 }
@@ -116,7 +116,7 @@ body {
   color: var(--white);
 }
 .card-result {
-  color: hsla(25deg, 97%, 53%, 0.6);
+  color: hsla(25, 97%, 53%, 0.6);
   background: rgb(38, 47, 56);
   border-radius: 2em;
   line-height: 2;
