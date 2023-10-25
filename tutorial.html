@@ -13,7 +13,7 @@
 
 <body>
     <div id="app">
-        <div class="modal-start">
+        <div id="modal-start" class="modal-start">
             <div class="modal-banner">
                 <img src="./newsletter-sign-up-main/assets/images/illustration-sign-up-mobile.svg" alt="">
             </div>
@@ -52,18 +52,18 @@
                     </ul>
                 </div>
                 <div class="c-dark-navy">
-                    <div class="input-group has-error mb-24">
+                    <div id="input-group" class="input-group mb-24">
                         <div class="input-group-top mb-8">
                             <p class="input-label body-small bold">Email address</p>
                             <p class="input-error body-small c-vermillion bold">Valid email required</p>
                         </div>
-                        <input type="text" class="input" placeholder="email@company.com">
+                        <input id="input" type="text" class="input" placeholder="email@company.com">
                     </div>
-                    <button class="submit c-white">Subscribe to monthly newsletter</button>
+                    <button id="submit" class="submit c-white">Subscribe to monthly newsletter</button>
                 </div>
             </div>
         </div>
-        <div class="modal-success --hide">
+        <div id="modal-success" class="modal-success --hide">
             <div class="modal-success-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
                     <defs>
@@ -82,9 +82,37 @@
             <div class="body">A confirmation email has been sent to <strong class="bold">ash@loremcompany.com</strong>.
                 Please open it and click the
                 button inside to confirm your subscription</div>
-            <submit class="modal-success-submit submit c-white">Dismiss message</submit>
+            <submit id="dismiss" class="modal-success-submit submit c-white">Dismiss message</submit>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const input = document.getElementById('input')
+            const inputGroup = document.getElementById('input-group')
+
+            const dismiss = document.getElementById('dismiss')
+            const submit = document.getElementById('submit')
+
+            const modalStart = document.getElementById('modal-start')
+            const modalSuccess = document.getElementById('modal-success')
+
+            submit.addEventListener('click', () => {
+                if (!input) return
+                if (input.value.match('@') === null) {
+                    inputGroup.classList.add('has-error')
+                    return
+                } else {
+                    inputGroup.classList.remove('has-error')
+                }
+                modalStart.classList.add('--hide')
+                modalSuccess.classList.remove('--hide')
+            })
+            dismiss.addEventListener('click', () => {
+                modalStart.classList.remove('--hide')
+                modalSuccess.classList.add('--hide')
+            })
+        })
+    </script>
 </body>
 
 </html>
