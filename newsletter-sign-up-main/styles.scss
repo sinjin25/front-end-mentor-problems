@@ -49,7 +49,7 @@ todo: active states on mobile and not
 
 /* utility */
 .--hide {
-    display: none;
+    display: none !important;
 }
 
 /* color */
@@ -153,6 +153,13 @@ todo: active states on mobile and not
     border-radius: var(--px-8);
 
     text-align: center;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+        background-image: linear-gradient(to left bottom, #FF6A3A, #FF527B);
+        filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+    }
 }
 
 .input {
@@ -168,9 +175,23 @@ todo: active states on mobile and not
 
     &-label {}
 
-    &-error {}
+    &-error {
+        display: none;
+    }
 
     &-group {}
+}
+
+.has-error {
+    .input {
+        color: var(--vermillion);
+        background-color: rgba(255, 97, 85, .15);
+        border-color: var(--vermillion);
+    }
+
+    .input-error {
+        display: block;
+    }
 }
 
 .list {
