@@ -79,6 +79,8 @@ todo: active states on mobile and not
     --desktop-width: 928px;
     --desktop-banner-width: 400px;
     --desktop-banner-height: 593px;
+    --desktop-success-height: 520px;
+    --desktop-success-width: 504px;
 }
 
 /* color */
@@ -184,6 +186,22 @@ todo: active states on mobile and not
 
     &-submit {
         margin-top: auto;
+
+        /* nudge mobile to make it match position */
+        position: relative;
+        top: 2px;
+
+        @media only screen and (min-width: 928px) {
+            top: 0px;
+        }
+    }
+
+    @media only screen and (min-width: 928px) {
+        height: var(--desktop-success-height);
+        width: var(--desktop-success-width);
+        padding: 48px 64px 64px 64px;
+
+        border-radius: 36px;
     }
 }
 
